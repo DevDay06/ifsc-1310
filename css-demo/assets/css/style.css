@@ -118,10 +118,10 @@ nav.primary ul li a:hover{
 #content{}
 #content h2{
     color: #ffffff;
-    border-bottom: 1px dotted whitesmoke;
+    border-bottom: 1px dotted #ffffff;
 }
 #content h3{
-    border-left: 6.5px solid whitesmoke;
+    border-left: 6.5px solid #ffffff;
     padding: 5px 0 5px 10px;
 }
 #blog{
@@ -129,8 +129,8 @@ nav.primary ul li a:hover{
     flex-direction:row;
     justify-content:center;
     gap:30px;
-    border-top:1px solid #cccccc;
-    border-bottom:1px solid #cccccc;
+    border-top:1px solid #ffffff;
+    border-bottom:1px solid #ffffff;
     padding:40px 0;
 }
 #blog article.post{
@@ -149,7 +149,7 @@ figure{
 figcaption, time{
     text-transform:uppercase;
     font-size: 1.5rem;
-    color:#c0c0c0;
+    color:#ffffff;
 }
 #blog article.post a{
     color: #ffffff;
@@ -167,14 +167,14 @@ aside .container a{
     color:#ffffff;
   }
 aside .container a{
-    color: white;
+    color: #ffffff;
     display:block;
     text-align: right;
     }
 
 
 #colophon{
-    background-color: whitesmoke;
+    background-color: #000000;
     padding:1px;
     text-allign: center;
     font-size: 1.2rem;
