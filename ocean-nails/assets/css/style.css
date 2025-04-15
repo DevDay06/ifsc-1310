@@ -1,9 +1,58 @@
 body {
-    background-color: #73C2FB;
+    background-color: #ffffff;
 }
 body {
     font-family: "Overpass", sans-serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
+}
+main{}
+header.primary{
+    background-color:#ffffff;
+    background-image: url("");
+    color: #F2C6C2;
+    text-align: center;
+}
+header h1{
+    font-size: 1.5rem;
+    margin: 20px 0 0; 
+}
+header.primary h1 a{
+    color: #2ECEF2;
+    text-decoration: none;
+}
+
+header.primary h2{
+    color:#2ECEF2
+    font-size: 1.3rem;
+    margin:0;
+    letter-spacing: 1px;
+}
+
+nav.primary{}
+nav.primary ul{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 960px;
+    margin: 20px auto;
+}
+nav.primary ul li{
+    list-style-type: none;
+}
+nav.primary ul li a{
+    color:#2ECEF2;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    background-color: #F2C6C2;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 20px 0;
+    transition: .4s;
+}
+nav.primary ul li a:hover{
+    background-color: rgba(0,0,0,.8);
 }
