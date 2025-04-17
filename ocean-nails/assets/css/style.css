@@ -19,12 +19,12 @@ header h1{
     margin: 20px 0 0; 
 }
 header.primary h1 a{
-    color: #2ECEF2;
+    color: #F2C6C2;
     text-decoration: none;
 }
 
 header.primary h2{
-    color:#2ECEF2
+    color:#2ECEF2;
     font-size: 1.3rem;
     margin:0;
     letter-spacing: 1px;
@@ -43,13 +43,13 @@ nav.primary ul li{
     list-style-type: none;
 }
 nav.primary ul li a{
-    color:#2ECEF2;
+    color:#30BBF2;
     font-size: 1.5rem;
     text-decoration: none;
     border: 1px solid #000;
     padding: 5px 10px;
     background-color: #F2C6C2;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(242, 198, 194, .4);
     border-radius: 20px 0;
     transition: .4s;
 }
