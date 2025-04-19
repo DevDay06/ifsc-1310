@@ -7,6 +7,7 @@
 */
 
 /*----------------Box Sizing-----------------*/
+
 html{
     box-sizing: border-box;
 }
@@ -14,6 +15,28 @@ html{
 *:before,
 *:after {
   box-sizing:inherit
+}
+
+
+/*------------Utility Styles-----------*/
+
+.container {
+    width: 80vw;
+    margin: 40px auto;
+    max-width: 900px;
+}
+.img-right {
+    float: right;
+    margin: 10px 0 10px 20px;
+    border: 1px solid #2ECEF2;
+    padding: 5px;
+    max-width: 33%;
+}
+.img-left {
+    float: left;
+    margin: 10px 20px 10px 0;
+    border: 1px solid #30BBF2;
+    padding: 5px;
 }
 body {
     background-color: #ffffff;
