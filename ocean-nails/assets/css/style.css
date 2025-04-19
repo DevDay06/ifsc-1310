@@ -1,3 +1,20 @@
+/* Color Theme
+#242526
+#30BBF2
+#2ECEF2
+#F2E2CE
+#F2C6C2
+*/
+
+/*----------------Box Sizing-----------------*/
+html{
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing:inherit
+}
 body {
     background-color: #ffffff;
 }
