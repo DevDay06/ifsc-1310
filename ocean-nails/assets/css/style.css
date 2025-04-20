@@ -53,7 +53,7 @@ img{
 
 /*-------Glbal Styles--------*/
 body {
-    background-color: #ffffff;
+    background-color: #F2C6C2;
 }
 body {
     font-family: "Overpass", sans-serif;
@@ -66,7 +66,7 @@ body {
 header.primary{
     background-color: #ffffff;
     text-align: center;
-    color: #F2C6C2;
+    color: #ffffff;
     /* shorthand T,R,B,L*/
     padding: 6em 2em;
     position: relative;
@@ -138,7 +138,7 @@ nav.primary ul li a:hover{
 /*----------------Content----------*/
 
 section#content {
-    padding: 5em 0;
+    padding: 3em 0;
 }
 section#content h2 {
     font-family: "Overpass", sans-serif;
@@ -151,7 +151,7 @@ section#content h3{
 }
 section#content table{
     width: 100%;
-    border: 2px solid #30BBF2;
+    border: 1px solid #30BBF2;
     border-collapse: collapse;
 }
 section#content caption{
@@ -185,7 +185,7 @@ section#articles {
 }
 section#articles .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     flex-wrap: wrap;
     border-bottom: 2px solid #000;
@@ -195,4 +195,143 @@ section#articles h2, #content h2 {
     flex: 0 0 100%;
     color:#30BBF2;
     text-align: center;
+    font-family: "Overpass", sans-serif;
+    font-size: 3em;
 }
+section#articles h2 {
+    color: #F2C6C2;
+}
+#articles article.post {
+    width: 30%;
+    box-shadow: 0 5px 7px rgba(0,0,0,0.5);
+    padding: 10px;
+    transition: 0.5s;
+    font-size: 0.7rem;
+    border-radius: 10px;
+    background: #ffffff;
+}
+#articles article.post h2 {
+    font-size: 1.6rem;
+    text-shadow: none;
+}
+#articles srticle.post:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+#articles article time,
+#articles article figcaption,
+#articles article footer {
+    font-size: 0.8em;
+    color: #000;
+    text-transform: uppercase;
+}
+#article .post a:link,
+#articles .post a:visited {
+    color: #30BBF2;
+    text-decoration: none;
+    text-shadow: 1px 1px #000;
+}
+#articles .post figure {
+    margin: 0;
+}
+#articles .post img {
+    border-radius: 10px;
+}
+#articles ul {
+    padding: 0 10px;
+}
+#articles li {
+    margin-bottom: 10px;
+}
+/*------Aside--------*/
+aside[role="complementary"]{
+    background-color: #30BBF2;
+    color: #ffffff;
+    padding: 1.5em;
+}
+aside .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 15px;
+}
+aside article.widget {
+    flex: 1;
+}
+.widget.overview table {
+    font-size: 0.5em;
+    border-collapse: collapse;
+    width: 100%;
+}
+.widget.overview table td {
+    border-bottom: 1px solid #2ECEF2;
+    padding: 10px;
+}
+.widget.overview table td:nth-child(even) {
+    text-align: right;
+}
+aside article a:link,
+aside article a:visited {
+    color: #30BBF2;
+    display: block;
+    margin-top: 1.3em;
+    letter-spacing: 1.3px;
+}
+aside article a:hover,
+aside article a:active {
+    text-decoration: none;
+}
+aside article footer {
+    display: none;
+}
+/*---------footer---------*/
+
+footer#colophon {
+    background-color: #F2C6C2;
+}
+#colophon h6 {
+    padding: 10px;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+#colophon h6 a:link,
+#colophon h6 a:visited {
+    color: aliceblue;
+}
+/* ---------------Media Queries----------------- */
+
+@media screen and (max-width: 600px) {
+    header.primary nav ul {
+      flex-direction: column;
+      margin: 0 auto;
+      width: 400px;
+    }
+  
+    header.primary nav ul li {
+      margin-bottom: 10px;
+      width: 400px;
+    }
+  
+    header.primary nav ul li a {
+      display: block;
+    }
+  
+    section#articles .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #000;
+      padding: 0 0 4em 0;
+    }
+  
+    #articles article.post {
+      width: 100%;
+      margin-bottom: 2em;
+    }
+    
+    aside .container {
+    flex-direction: column;
+  }
