@@ -22,33 +22,33 @@ html{
 
 .container {
     width: 80vw;
+    max-width: 960px;
     margin: 40px auto;
-    max-width: 900px;
 }
-.img-right {
+.img-right{
     float: right;
+    border: 1px solid #000000;
+    padding:5px;
     margin: 10px 0 10px 20px;
-    border: 1px solid #2ECEF2;
-    padding: 5px;
-    max-width: 33%;
-}
-.img-left {
+    max-width: 20vw;
+  }
+  .img-left{
     float: left;
-    margin: 10px 20px 10px 0;
-    border: 1px solid #30BBF2;
+    border:2px #000000;
+    padding:4px;
+    margin: 10px 0 10 px 20px;
+    max-width: 30vw;
+  }
+  .img-center{
+    display:block;
+    margin: 1px auto;
+    border: 1px solid #000000;
     padding: 5px;
-}
-.img-center {
-    display: block;
-    margin: 20px auto;
-    border: 1px solid #30BBF2
-    padding: 5px;
-}
+  }
 
 /*------Responsive Images------*/
 img{
     max-width: 100%;
-    height: auto;
 }
 
 /*-------Glbal Styles--------*/
@@ -68,13 +68,16 @@ header.primary{
     text-align: center;
     color: #ffffff;
     /* shorthand T,R,B,L*/
-    padding: 6em 2em;
+   padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
     position: relative;
 }
 header.primary::before {
     content: "";
     background-image: url("../img/header.jpeg");
-    background-size: cover;
+    background-size: contain;
     position: absolute;
     top: 0px;
     right: 0px;
@@ -143,11 +146,24 @@ section#content {
 section#content h2 {
     font-family: "Overpass", sans-serif;
     color: #F2C6C2;
+    
 }
 section#content h3{
     font-family: "Overpass", sans-serif;
     color: #30BBF2;
     font-size: 2.5rem;
+    border-left: 6.5px solid #ffffff;
+    padding: 5px 0 5px 10px;
+}
+#blog article.post{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    transition: 5s;
+}
+#blog article.post:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 section#content table{
     width: 100%;
@@ -178,18 +194,27 @@ section#content tr:nth-child(even){
 section#content tr:hover{
     background: #F2C6C2;
 }
+#faq section#content tr:hover{
+    background: #F2C6C2;
+}
 /*----- Articles ------*/
 
 section#articles {
     background: #F2C6C2;
 }
+
 section#articles .container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-bottom: 2px solid #000;
-    padding: 0 0 3em 0;
+    flex-direction:row;
+    justify-content:center;
+    gap:30px;
+    border-top:1px solid #ffffff;
+    border-bottom:1px solid #ffffff;
+    padding:40px 0;
+}
+#faq section#articles .container {
+    justify-content: center;
+    font-size: 2.5rem;
 }
 section#articles h2, #content h2 {
     flex: 0 0 100%;
@@ -197,8 +222,15 @@ section#articles h2, #content h2 {
     text-align: center;
     font-family: "Overpass", sans-serif;
     font-size: 3em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 4px;
+    transition: 5s;
 }
 section#articles h2 {
+    color: #F2C6C2;
+}
+#faq section#articles h2 {
     color: #F2C6C2;
 }
 #articles article.post {
