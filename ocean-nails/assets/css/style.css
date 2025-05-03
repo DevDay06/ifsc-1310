@@ -36,7 +36,7 @@ html{
     float: left;
     border:2px #000000;
     padding:4px;
-    margin: 10px 0 10 px 20px;
+    margin: 10px 0 10px 20px;
     max-width: 30vw;
   }
   .img-center{
@@ -79,10 +79,10 @@ header.primary::before {
     background-image: url("../img/header.jpeg");
     background-size: contain;
     position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     opacity: 0.5;
 }
 header h1{
@@ -92,10 +92,10 @@ header h1{
 }
 header.primary h1 a{
     color: #F2C6C2;
-    background-image: url("../img/logo.PNG");
+    background-image: url("../img/logo.png");
     display: block;
-    width: 782px;
-    height: 250px;
+    width: 150px;
+    height: 98px;
     margin: 0 auto;
     text-indent: 100%;
     white-space: nowrap;
@@ -109,7 +109,6 @@ header.primary h2{
     font-size: 1.3rem;
     /* Shorthand Three Value Top, Left/Right. Bottom*/
     letter-spacing: 1px;
-    position: relative;
 }
 
 header.primary nav ul{
@@ -141,11 +140,11 @@ nav.primary ul li a:hover{
 /*----------------Content----------*/
 
 section#content {
-    padding: 3em 0;
+    padding: 2em 0;
 }
 section#content h2 {
     font-family: "Overpass", sans-serif;
-    color: #F2C6C2;
+    color: #ffffff;
     
 }
 section#content h3{
@@ -172,10 +171,9 @@ section#content table{
 }
 section#content caption{
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 10px;
     font-family: "Overpass", sans-serif;
-    font-size: 3rem;
     color: #2ECEF2;
 }
 section#content th{
@@ -203,20 +201,20 @@ section#articles {
     background: #F2C6C2;
 }
 
-section#articles .container {
+section#articles .container h2{
     display: flex;
     flex-direction:row;
-    justify-content:center;
-    gap:30px;
+    justify-content: center;
+    gap: 10px;
     border-top:1px solid #ffffff;
     border-bottom:1px solid #ffffff;
-    padding:40px 0;
+    padding:30px 0;
 }
-#faq section#articles .container {
-    justify-content: center;
+#faq section#articles{
     font-size: 2.5rem;
+    text-align: center;
 }
-section#articles h2, #content h2 {
+section#articles, #content h2 {
     flex: 0 0 100%;
     color:#30BBF2;
     text-align: center;
@@ -230,9 +228,7 @@ section#articles h2, #content h2 {
 section#articles h2 {
     color: #F2C6C2;
 }
-#faq section#articles h2 {
-    color: #F2C6C2;
-}
+
 #articles article.post {
     width: 30%;
     box-shadow: 0 5px 7px rgba(0,0,0,0.5);
@@ -263,7 +259,7 @@ section#articles h2 {
     text-shadow: 1px 1px #000;
 }
 #articles .post figure {
-    margin: 0;
+    margin: 5px;
 }
 #articles .post img {
     border-radius: 10px;
@@ -274,6 +270,40 @@ section#articles h2 {
 #articles li {
     margin-bottom: 10px;
 }
+details{
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1.5rem;
+  }
+  
+  summary {
+    padding: .5em 1.3rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;  
+    transition: height 1s ease;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  summary:after{
+    content: "\002B";
+  }
+  
+  details[open] summary {
+      border-bottom: 1px solid #000;
+      margin-bottom: .5em;
+  }
+  
+  details[open] summary:after{
+    content: "\00D7";
+  }
+  
+  details[open] div{
+    padding: .5em 1em;
+  }
 /*------Aside--------*/
 aside[role="complementary"]{
     background-color: #30BBF2;
@@ -352,7 +382,7 @@ footer#colophon {
   
     section#articles .container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row-reverse;
       justify-content: space-between;
       flex-wrap: wrap;
       border-bottom: 1px solid #000;
