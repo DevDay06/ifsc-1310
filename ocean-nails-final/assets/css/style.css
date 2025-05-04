@@ -73,7 +73,7 @@ header.primary{
 }
 header.primary::before {
     content: "";
-    background-image: url("../img/header.jpeg");
+    background-image: url("../img/oceanhead.webp");
     background-size: 2050px 450px, cover;
     background-repeat: no-repeat;
     position: absolute;
@@ -271,7 +271,7 @@ details{
     list-style: none;
     display: flex;
     justify-content: space-between;  
-    transition: height 1s ease;
+    transition: height 4s ease;
   }
   
   summary::-webkit-details-marker {
@@ -283,16 +283,18 @@ details{
   }
   
   details[open] summary {
-      border-bottom: 1px solid #000;
+      border-bottom: 3px solid #000;
       margin-bottom: .5em;
   }
   
   details[open] summary:after{
     content: "\00D7";
+    border-bottom: 3px solid #ffffff;
   }
   
   details[open] div{
     padding: .5em 1em;
+    border-bottom: 3px solid #ffffff;
   }
 /*------Aside--------*/
 aside[role="complementary"]{
