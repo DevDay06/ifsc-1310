@@ -14,7 +14,7 @@ html{
 *,
 *:before,
 *:after {
-  box-sizing:inherit
+  box-sizing:inherit;
 }
 
 
@@ -22,26 +22,26 @@ html{
 
 .container {
     width: 80vw;
-    max-width: 960px;
     margin: 40px auto;
+    max-width: 900px;
 }
 .img-right{
     float: right;
-    border: 1px solid #000000;
-    padding:5px;
     margin: 10px 0 10px 20px;
-    max-width: 20vw;
+    border: 1px solid #000000;
+    padding: 4px;
+    max-width: 30%;
   }
   .img-left{
     float: left;
-    border:2px #000000;
-    padding:4px;
     margin: 10px 0 10px 20px;
-    max-width: 30vw;
+    border:1px solid #000000;
+    padding:4px;
+    max-width: 30%;
   }
   .img-center{
     display:block;
-    margin: 1px auto;
+    margin: 30px auto;
     border: 1px solid #000000;
     padding: 5px;
   }
@@ -68,22 +68,20 @@ header.primary{
     text-align: center;
     color: #ffffff;
     /* shorthand T,R,B,L*/
-   padding-top: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;
-    padding-left: 40px;
+   padding: 5em 1em;
     position: relative;
 }
 header.primary::before {
     content: "";
-    background-image: url("../img/header.jpeg");
-    background-size: contain;
+    background-image: url("../img/oceanhead.webp");
+    background-size: 2050px 450px, cover;
+    background-repeat: no-repeat;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 header h1{
     font-size: 1.5rem;
@@ -103,12 +101,12 @@ header.primary h1 a{
 }
 
 header.primary h2{
-    position: relative;
     font-family: "Overpass", sans-serif;
     color:#2ECEF2;
     font-size: 1.3rem;
     /* Shorthand Three Value Top, Left/Right. Bottom*/
-    letter-spacing: 1px;
+    margin: 30px auto 40px;
+    position: relative;
 }
 
 header.primary nav ul{
@@ -117,11 +115,13 @@ header.primary nav ul{
     flex-direction: row;
     justify-content: space-around;
     padding: 0;
-    max-width: 960px;
-    margin: 20px auto;
+    max-width: 900px;
+    margin: 30px auto;
 }
 nav.primary ul li{
     list-style-type: none;
+    padding: 0;
+    width: 15%;
 }
 nav.primary ul li a{
     color:#30BBF2;
@@ -140,47 +140,41 @@ nav.primary ul li a:hover{
 /*----------------Content----------*/
 
 section#content {
-    padding: 2em 0;
+    padding: 1em 0;
 }
+
 section#content h2 {
     font-family: "Overpass", sans-serif;
     color: #ffffff;
     
 }
+
 section#content h3{
     font-family: "Overpass", sans-serif;
     color: #30BBF2;
     font-size: 2.5rem;
-    border-left: 6.5px solid #ffffff;
+    border-left: 6.5px solid #000;
     padding: 5px 0 5px 10px;
 }
-#blog article.post{
-    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
-    padding: 10px;
-    font-size: 1.2rem;
-    border-radius: 4px;
-    transition: 5s;
-}
-#blog article.post:hover{
-    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-}
+
 section#content table{
     width: 100%;
-    border: 1px solid #30BBF2;
+    border: 2px solid #30BBF2;
     border-collapse: collapse;
 }
 section#content caption{
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 10px;
     font-family: "Overpass", sans-serif;
+    font-size: 2rem;
     color: #2ECEF2;
 }
 section#content th{
     background: #000;
     color: #2ECEF2;
     text-align:left;
-    padding: 10px;
+    padding: 15px;
 }
 section#content td{
     border: 2px solid #30BBF2;
@@ -192,29 +186,23 @@ section#content tr:nth-child(even){
 section#content tr:hover{
     background: #F2C6C2;
 }
-#faq section#content tr:hover{
-    background: #F2C6C2;
-}
 /*----- Articles ------*/
 
 section#articles {
     background: #F2C6C2;
 }
 
-section#articles .container h2{
+section#articles .container{
     display: flex;
-    flex-direction:row;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
     border-top:1px solid #ffffff;
     border-bottom:1px solid #ffffff;
-    padding:30px 0;
+    padding:0 0 3em 0;
 }
-#faq section#articles{
-    font-size: 2.5rem;
-    text-align: center;
-}
-section#articles, #content h2 {
+section#articles,h2 
+#content h2 {
     flex: 0 0 100%;
     color:#30BBF2;
     text-align: center;
@@ -227,15 +215,16 @@ section#articles, #content h2 {
 }
 section#articles h2 {
     color: #F2C6C2;
+    text-shadow: 3px 3px #000000;
 }
 
 #articles article.post {
     width: 30%;
-    box-shadow: 0 5px 7px rgba(0,0,0,0.5);
+    box-shadow: 0 5px 7px rgba(0,0,0,0.3);
     padding: 10px;
     transition: 0.5s;
     font-size: 0.7rem;
-    border-radius: 10px;
+    border-radius: 8px;
     background: #ffffff;
 }
 #articles article.post h2 {
@@ -243,8 +232,9 @@ section#articles h2 {
     text-shadow: none;
 }
 #articles article.post:hover {
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    box-shadow: 0 7px 14px rgba(0,0,0,0.4);
 }
+
 #articles article time,
 #articles article figcaption,
 #articles article footer {
@@ -259,19 +249,19 @@ section#articles h2 {
     text-shadow: 1px 1px #000;
 }
 #articles .post figure {
-    margin: 5px;
+    margin: 1px;
 }
 #articles .post img {
     border-radius: 10px;
 }
 #articles ul {
-    padding: 0 10px;
+    padding: 0 20px;
 }
 #articles li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 details{
-    background-color: #ffffff;
+    background-color: #F2C6C2;
     color: #000000;
     font-size: 1.5rem;
   }
@@ -308,13 +298,13 @@ details{
 aside[role="complementary"]{
     background-color: #30BBF2;
     color: #ffffff;
-    padding: 1.5em;
+    padding: 2.5em;
 }
 aside .container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 15px;
+    gap: 20px;
 }
 aside article.widget {
     flex: 1;
@@ -351,7 +341,7 @@ footer#colophon {
     background-color: #F2C6C2;
 }
 #colophon h6 {
-    padding: 10px;
+    padding: 20px;
     margin: 0;
     color: #ffffff;
     text-align: center;
@@ -360,7 +350,7 @@ footer#colophon {
 }
 #colophon h6 a:link,
 #colophon h6 a:visited {
-    color: aliceblue;
+    color: #000;
 }
 /* ---------------Media Queries----------------- */
 
@@ -382,7 +372,7 @@ footer#colophon {
   
     section#articles .container {
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
       border-bottom: 1px solid #000;
